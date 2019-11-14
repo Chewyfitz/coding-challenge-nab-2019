@@ -16,7 +16,13 @@ This script works in four main modes:
 3. `./fib.sh N Y`, supplying the arguments outside of brackets; and
 4. `./fib.sh`, which prompts the user for both values.
 
+It's possible you may be required to run the file as `sh ./fib.sh (args)`, but I didn't have to in my testing. If this is the case, it's possible the command-line arguments might break, so you might be forced to use the prompt-based version if this hasn't been fixed.
+
 The output for this script is printed to the console.
+
+## fib.c
+
+## fib.cpp
 
 ## fib.hs
 This is a Haskell file. Unfortunately taking command-line input in Haskell is not an easy task (it can be done, but it's much easier to take arguments one at a time since the main function does not allow polymorphism), so I've instead opted to use a different format of asking for the arguments one-by-one. 
@@ -32,3 +38,11 @@ Once you have provided those two values the answer will be printed to the consol
 Since the definition of `fibs` is one line, you are also welcome to explore it in `ghci`, where you can define `fibs` with `let fibs = 0:1:zipWith (+) fibs (tail fibs)`.
 You can then view any amount of fibonacci numbers with the command `take [number] fibs`.
 (also a reminder that the command to quit `ghci` is `:q`, similarly to vim)
+
+## fib.java
+
+## fib.js
+
+## fib.py
+
+## fib.vba
