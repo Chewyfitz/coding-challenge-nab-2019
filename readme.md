@@ -2,7 +2,11 @@
 # NAB Technology Internship Coding Challenge
 I have written multiple different solutions in a variety of languages. This file includes instructions on how to compile and/or run these files, since there is at least one implementation outside of the list of allowed programming languages (which I thought would be good to include bcause it is by far the simplest solution out of any, being written in a Declarative Programming Language).
 
+This set of solutions is also available at github: https://github.com/Chewyfitz/coding-challenge-nab-2019
+The repository will be made public at (approximately) 5pm on Monday the 18th of November so as to deter any copying by others attempting the challenge.
+
 ## fib.sh
+
 
 
 ## fib.hs
