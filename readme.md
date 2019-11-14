@@ -7,7 +7,16 @@ The repository will be made public at (approximately) 5pm on Monday the 18th of 
 
 ## fib.sh
 
+I'm not overly familiar with Bash (the only time I've used it is for personal projects out of, but I thought I'd give this a go anyway so that I can get a bit more experience. 
+This implementation requires `bc` for `N` values `>=93`. This might seem arbitrary, but it's the largest number which overflows with bash built-in maths.
 
+This script works in four main modes:
+1. `./fib.sh [N,Y]`;
+2. `./fib.sh [N, Y]`, with a space in between `N,` and `Y`;
+3. `./fib.sh N Y`, supplying the arguments outside of brackets; and
+4. `./fib.sh`, which prompts the user for both values.
+
+The output for this script is printed to the console.
 
 ## fib.hs
 This is a Haskell file. Unfortunately taking command-line input in Haskell is not an easy task (it can be done, but it's much easier to take arguments one at a time since the main function does not allow polymorphism), so I've instead opted to use a different format of asking for the arguments one-by-one. 
