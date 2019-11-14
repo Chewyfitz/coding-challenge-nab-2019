@@ -1,4 +1,17 @@
 #!/usr/bin/python
+
+"""
+Aidan Fitzpatrick (chewyfitz@gmail.com) - fib.py
+Takes two arguments in the format of `[NUM, NUM]`, `[NUM,NUM]`, or `NUM NUM`; or
+alternatively can be run with no arguments, with the user prompted to input the
+required values.
+This file does not define any functions as it is simple enough to not require
+them.
+
+fib.py takes an `N` and a `Y` value, finding the number of fibonacci numbers up 
+to `N` which have length `Y`.
+"""
+
 import sys
 import re
 
