@@ -2,41 +2,50 @@
 import sys
 import re
 
+# An empty string to store the numbers. Needs to be defined here so that it can
+# be checked regardless of if the arguments are successfully read or not.
 string = ''
 
 # Get the runtime args if they are supplied
 if(len(sys.argv)>2):
+	# If two args are supplied, they are either '[NUM,', 'NUM]' or 'NUM' 'NUM'
 	string = sys.argv[1] + ' ' + sys.argv[2]
 elif(len(sys.argv)>1):
+	# If one arg is supplied, it is of form '[NUM,NUM]'
 	string = sys.argv[1]
 
 # If no runtime args were supplied, prompt the user for them instead
 if(string):
+	# Attempt to get the arg numbers with regex
 	try:
 		[(N, Y)] = re.findall('^\[*([0-9]+)[, ]+([0-9]+)\]*$', string)
 	except:
-		sys.exit("Error: Args not supplied properly!") 
+		sys.exit("Error: Args not supplied properly! Check the number of args!") 
 else:
+	# Get user input
 	N = input("Enter the number of fibonacci sequence numbers to generate: ")
 	Y = input("Enter how many digits in length numbers in the sequence to be counted must be: ")
 
 if( len(N) <= 0 or len(Y) <= 0 ):
+	# If N or Y have not been supplied
 	sys.exit("Error: Numbers not supplied or not in correct format!")
 
+# Convert N and Y to int for the next part
 N = int(N)
 Y = int(Y)
 
-print(N, Y)
-
-fibs = {0:1, 1:1}
+# Define the fibonacci list
+fibs = [1, 1]
 if N > 2:
 	for i in range(2,N):
-		fibs[i] = fibs[i-1] + fibs[i-2]
+		# append() is O(1) for lists
+		fibs.append(fibs[i-1] + fibs[i-2])
 
+# Count how many numbers have length Y
 count = 0
 for a in range(N):
-	print(fibs[a])
 	if(len(str(fibs[a])) == Y):
 		count += 1
 
+# print the count
 print(count)
