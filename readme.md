@@ -55,4 +55,9 @@ You can then view any amount of fibonacci numbers with the command `take [number
 
 ## fib.py [Python]
 
+Written in python 3, `fib.py` does not need to be compiled. 
+Like many other implementations, it accepts runtime arguments of the forms `[N,Y]`, `[N, Y]`, or `N Y`, as well as a prompt mode which specifically asks the user for input.
+
+Output is printed to the console.
+
 ## fib.vba [Visual Basic]
