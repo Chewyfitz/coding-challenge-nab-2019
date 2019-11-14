@@ -15,7 +15,7 @@ This file has instructions for the following implementations (in order):
 This set of solutions is also available at github: https://github.com/Chewyfitz/coding-challenge-nab-2019
 The repository will be made public at (approximately) 5pm on Monday the 18th of November so as to deter any copying by others attempting the challenge.
 
-## fib.sh
+## fib.sh [Bash]
 
 I'm not overly familiar with Bash (the only time I've used it is for personal projects out of, but I thought I'd give this a go anyway so that I can get a bit more experience. 
 This implementation requires `bc` for `N` values `>=93`. This might seem arbitrary, but it's the largest number which overflows with bash built-in maths.
@@ -30,11 +30,11 @@ It's possible you may be required to run the file as `sh ./fib.sh (args)`, but I
 
 The output for this script is printed to the console.
 
-## fib.c
+## fib.c [C]
 
-## fib.cpp
+## fib.cpp [C++]
 
-## fib.hs
+## fib.hs [Haskell]
 This is a Haskell file. Unfortunately taking command-line input in Haskell is not an easy task (it can be done, but it's much easier to take arguments one at a time since the main function does not allow polymorphism), so I've instead opted to use a different format of asking for the arguments one-by-one. 
 The following instructions are provided for anyone who is unfamiliar with Haskell.
 
@@ -49,10 +49,10 @@ Since the definition of `fibs` is one line, you are also welcome to explore it i
 You can then view any amount of fibonacci numbers with the command `take [number] fibs`.
 (also a reminder that the command to quit `ghci` is `:q`, similarly to vim)
 
-## fib.java
+## fib.java [Java]
 
-## fib.js
+## fib.js [JavaScript]
 
-## fib.py
+## fib.py [Python]
 
-## fib.vba
+## fib.vba [Visual Basic]
