@@ -48,7 +48,7 @@ N = int(N)
 Y = int(Y)
 
 # Define the fibonacci list
-fibs = [1, 1]
+fibs = [0, 1]
 if N > 2:
 	for i in range(2,N):
 		# append() is O(1) for lists
