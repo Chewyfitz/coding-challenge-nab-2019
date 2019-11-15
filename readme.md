@@ -51,6 +51,13 @@ You can then view any amount of fibonacci numbers with the command `take [number
 
 ## fib.java [Java]
 
+The java implementation was not created using an IDE and does not have a `makefile`, but can be compiled with `javac Fib.java` and run with the expected modes:
+1. `java Fib [N,Y]`
+2. `java Fib [N, Y]`
+3. `java Fib N Y`
+4. `java Fib` (Interactive)
+This implementation is very similar to the C implementation, except it handles the case of too many runtime arguments by prompting the user instead of erroring.
+
 ## fib.js [JavaScript]
 
 ## fib.py [Python]
