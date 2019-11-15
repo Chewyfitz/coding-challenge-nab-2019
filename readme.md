@@ -32,6 +32,17 @@ The output for this script is printed to the console.
 
 ## fib.c [C]
 
+The C implementation only supports `N` values up to `23601`, above which `long double` rounds to `inf`. This could be mitigated with an external library, but I've opted to apply a constraint so that the program can remain compact and portable.
+Another notable restriction with this implementation is the fact that for a `Y` value above `4933` the result will always be 0, since `long double` cannot handle values that large.
+Also notable, this implementation doesn't store the entire history of computed numbers, as they aren't needed. Instead they are stored in three `long double`s, and swapped around to be operated on.
+The C version also has a `Makefile` included, so compiling can be performed with `make`, and then the program can be run in the four expected modes:
+1. `./fib [N,Y]`
+2. `./fib [N, Y]`
+3. `./fib N Y`
+4. `./fib` (interactive)
+
+I've also initialised a debug compilation script with `make debug`, which at the moment only prints the input variables, but could be modified to do whatever is needed.
+
 ## fib.cpp [C++]
 
 ## fib.hs [Haskell]
@@ -51,9 +62,28 @@ You can then view any amount of fibonacci numbers with the command `take [number
 
 ## fib.java [Java]
 
+The java implementation was not created using an IDE and does not have a `makefile`, but can be compiled with `javac Fib.java` and run with the expected modes:
+1. `java Fib [N,Y]`
+2. `java Fib [N, Y]`
+3. `java Fib N Y`
+4. `java Fib` (Interactive)
+This implementation is very similar to the C implementation, except it handles the case of too many runtime arguments by prompting the user instead of erroring.
+
 ## fib.js [JavaScript]
+Javascript implementation is written in node-based javascript (run with `node fib.js` or `js fib.js` if your system supports it).
+You can also (as with all the other implementations) run it with:
+1. `js fib.js [N,Y]`
+2. `js fib.js [N, Y]`
+3. `js fib.js N Y`
+4. `js fib.js` (interactive)
+This file is also (in its current implementation) missing a proper description of what the script actually does.
 
 ## fib.py [Python]
+
+Written in python 3, `fib.py` does not need to be compiled. 
+Like many other implementations, it accepts runtime arguments of the forms `[N,Y]`, `[N, Y]`, or `N Y`, as well as a prompt mode which specifically asks the user for input.
+
+Output is printed to the console.
 
 ## fib.vbs [Visual Basic]
 
