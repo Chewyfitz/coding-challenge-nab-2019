@@ -70,6 +70,13 @@ The java implementation was not created using an IDE and does not have a `makefi
 This implementation is very similar to the C implementation, except it handles the case of too many runtime arguments by prompting the user instead of erroring.
 
 ## fib.js [JavaScript]
+Javascript implementation is written in node-based javascript (run with `node fib.js` or `js fib.js` if your system supports it).
+You can also (as with all the other implementations) run it with:
+1. `js fib.js [N,Y]`
+2. `js fib.js [N, Y]`
+3. `js fib.js N Y`
+4. `js fib.js` (interactive)
+This file is also (in its current implementation) missing a proper description of what the script actually does.
 
 ## fib.py [Python]
 
