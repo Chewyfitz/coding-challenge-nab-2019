@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <math.h>
+#include <string.h>
 /*
 Aidan Fitzpatrick - fib.c
 
@@ -14,6 +15,12 @@ external library would be required to deal with arbitrary-length integers
 (which would detract greatly from the portability, as the current
 implementation is a single file.
 */
+#ifndef DEBUG
+	#define DEBUG 0
+#endif
+
+#define debug_print(fmt, ...)\
+	do { if (DEBUG) fprintf(stderr, fmt, __VA_ARGS__); } while (0)
 
 int parse_args(int argc, char* argv[], int* N, int* Y){
 	if(argc < 2){
@@ -25,19 +32,29 @@ int parse_args(int argc, char* argv[], int* N, int* Y){
 		return 1;
 	} else if (argc == 2) {
 		// Extract N and Y values from `[NUM,NUM]`
+		if(2 == sscanf(argv[1], "[%d,%d]", N, Y)){
+			debug_print("N = %d : Y = %d\n", *N, *Y);
+			return 1;
+		}
 	} else if (argc == 3) {
-		if(argv[1][1] == '['){
+		if(argv[1][0] == '['){
 			// Extract N and Y values from `[NUM, NUM]`
-
+			char* str = malloc((strlen(argv[1]) + strlen(argv[2]) + 1)*sizeof(char));
+			strcat(str, argv[1]);
+			strcat(str, argv[2]);
+			if(2 == sscanf(str, "[%d,%d]", N, Y)){
+				debug_print("N = %d : Y = %d\n", *N, *Y);
+				return 1;
+			}
 		} else {
 			// Convert N and Y values from `NUM NUM`
 			*N = atoi(argv[1]);
 			*Y = atoi(argv[2]);
-			printf("N = %d : Y = %d\n", *N, *Y);
+			debug_print("N = %d : Y = %d\n", *N, *Y);
 			return 1;
 		}
 	}
-	// Arguments not in accepted format (Too many or wrong type)
+	// Arguments not in accepted format (Too many or wrong format)
 	fprintf(stderr, "Incorrect args supplied\n");
 	exit(1);
 }
@@ -70,6 +87,5 @@ void main(int argc, char* argv[]){
 
 	// Print out the solution
 	printf("%d\n", count);
-	
 	return;
 }

@@ -1,5 +1,6 @@
 CC=gcc
 CFLAGS=
+DEBUGFLAGS= -D DEBUG
 
 LIBS=-lm
 
@@ -12,6 +13,9 @@ $(ODIR)/%.o: %.c $(DEPS)
 
 fib: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+debug: CFLAGS += $(DEBUGFLAGS)
+debug: fib
 
 .PHONY: clean
 
