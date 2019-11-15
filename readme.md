@@ -67,6 +67,7 @@ The java implementation was not created using an IDE and does not have a `makefi
 2. `java Fib [N, Y]`
 3. `java Fib N Y`
 4. `java Fib` (Interactive)
+
 This implementation is very similar to the C implementation, except it handles the case of too many runtime arguments by prompting the user instead of erroring.
 
 ## fib.js [JavaScript]
@@ -76,12 +77,16 @@ You can also (as with all the other implementations) run it with:
 2. `js fib.js [N, Y]`
 3. `js fib.js N Y`
 4. `js fib.js` (interactive)
-This file is also (in its current implementation) missing a proper description of what the script actually does.
 
 ## fib.py [Python]
 
 Written in python 3, `fib.py` does not need to be compiled. 
 Like many other implementations, it accepts runtime arguments of the forms `[N,Y]`, `[N, Y]`, or `N Y`, as well as a prompt mode which specifically asks the user for input.
+Runs in the following expected modes:
+1. `python3 fib.py [N,Y]`
+2. `python3 fib.py [N, Y]`
+3. `python3 fib.py N Y`
+4. `python3 fib.py` (interactive)
 
 Output is printed to the console.
 
