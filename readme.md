@@ -5,12 +5,11 @@ I have written multiple different solutions in a variety of languages. This file
 This file has instructions for the following implementations (in order):
 1. bash
 2. C
-3. C++
-4. Haskell
-5. Java
-6. JavaScript
-7. Python
-8. Visual Basic
+3. Haskell
+4. Java
+5. JavaScript
+6. Python
+7. Visual Basic
 
 This set of solutions is also available at github: https://github.com/Chewyfitz/coding-challenge-nab-2019
 The repository will be made public at (approximately) 5pm on Monday the 18th of November so as to deter any copying by others attempting the challenge.
@@ -44,6 +43,7 @@ The C version also has a `Makefile` included, so compiling can be performed with
 I've also initialised a debug compilation script with `make debug`, which at the moment only prints the input variables, but could be modified to do whatever is needed.
 
 ## fib.cpp [C++]
+I had intended to implement this, but it offers no benefit over traditional C. If you really want a "C++" solution, you can compile the C code with g++.
 
 ## fib.hs [Haskell]
 This is a Haskell file. Unfortunately taking command-line input in Haskell is not an easy task (it can be done, but it's much easier to take arguments one at a time since the main function does not allow polymorphism), so I've instead opted to use a different format of asking for the arguments one-by-one. 
