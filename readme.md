@@ -85,4 +85,11 @@ Like many other implementations, it accepts runtime arguments of the forms `[N,Y
 
 Output is printed to the console.
 
-## fib.vba [Visual Basic]
+## fib.vbs [Visual Basic]
+
+I'm... not really sure what's going on with vba to be perfectly honest. 
+In theory this should work in any context that Visual Basic scripts are allowed.
+The input for this script is a little different because VBScript IO is particularly partial to native/dialogue box style input and alert boxes.
+To run the script you can either do `cscript fib.vbs` or simply double-click on the script in windows explorer.
+The only available input type is the interactive input mode.
+This implementation does not work for a very high fibonacci sequence number (only tested up to `N=1000`).
