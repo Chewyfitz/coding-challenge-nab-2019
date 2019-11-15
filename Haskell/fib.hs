@@ -22,7 +22,7 @@ main = do
     putStrLn $ "There are " ++ soln ++ " numbers of length " ++ (show y) ++ " in the first " ++ (show n) ++ " fibonacci numbers." 
 -- (length.show) is a composite function (if you've never seen one before). It
 -- works in the same way as composite functions in maths, ie. (f.g) (x) = f(g(x))
-        where fibLengths n = map (length.show) (take n (tail fibs))
+        where fibLengths n = map (length.show) (take n fibs)
 
 -- A function to generate all the numbers in the fibonacci sequence.
 -- Takes no input, only provides the infinite list of fibonacci numbers.
