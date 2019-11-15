@@ -78,6 +78,42 @@ void main(int argc, char* argv[]){
 			fprintf(stderr, "Y Value too large, answer will be incorrect.\n");
 		}
 	}
+	long double fib_a = 0;
+	long double fib_b = 1;
+	long double fib_c = 0;
+	long double* a = &fib_a;
+	long double* b = &fib_b;
+	long double* c = &fib_c;
+
+	int count = 0;
+
+	if(Y == 1){
+		// If we're looking for length 1 need to increment values that aren't
+		// created in the loop.
+		count += 2;
+	}
+
+	// A temp for use during swaps
+	long double* temp = NULL;
+	for(int i=2; i<N; i++){
+		*c = *a + *b;
+		if(Y == (int)floor(log10l(fabsl(*c)))+1){
+			// Increment the count if the number is the right length
+			count++;
+		}
+		// pointer magic - swap c with the smaller of a and b
+		if(*a<*b){
+			temp = a;
+			a = c;
+			c = temp;
+		} else {
+			temp = b;
+			b = c;
+			c = temp;
+		}
+	}
+
+	/** Alternate method using memoisation **
 
 	// Create the array to store all of the numbers
 	long double* fibs = malloc(N*sizeof(long double));
@@ -97,7 +133,7 @@ void main(int argc, char* argv[]){
 			count++;
 		}
 	}
-
+	*/
 	// Print out the solution
 	printf("%d\n", count);
 	return;
