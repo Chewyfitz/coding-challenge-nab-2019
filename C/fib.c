@@ -22,6 +22,9 @@ implementation is a single file.
 #define debug_print(fmt, ...)\
 	do { if (DEBUG) fprintf(stderr, fmt, __VA_ARGS__); } while (0)
 
+#define MAX_N 23601
+#define MAX_Y 4932
+
 int parse_args(int argc, char* argv[], int* N, int* Y){
 	if(argc < 2){
 		// Prompt the user to input N and Y values manually
@@ -65,6 +68,16 @@ void main(int argc, char* argv[]){
 
 	// Parse the runtime arguments and store N and Y values
 	parse_args(argc, argv, &N, &Y);
+
+	// long double can only handle fibonacci numbers up to 23601.
+	// I decided to allow the program to still be run, since it's likely that
+	// the Y value will be small enough to still be computed properly.
+	if(N > MAX_N){
+		fprintf(stderr, "N Value too large, may behave unpredictably.\n");
+		if(Y > MAX_Y){
+			fprintf(stderr, "Y Value too large, answer will be incorrect.\n");
+		}
+	}
 
 	// Create the array to store all of the numbers
 	long double* fibs = malloc(N*sizeof(long double));
