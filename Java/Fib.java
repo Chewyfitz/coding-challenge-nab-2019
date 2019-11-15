@@ -1,5 +1,6 @@
 /* Aidan Fitzpatrick - Fib.java
- * 
+ * Find the number of numbers exactly y-digits long in a fibonacci sequence
+ * of length n. 
  */
 import java.util.Arrays;
 import java.util.List;

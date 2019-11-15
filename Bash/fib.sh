@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# fib.sh - Aidan Fitzpatrick
+# Find the number of numbers exactly y-digits long in a fibonacci sequence
+# of length n.
+
 # requires `bc` for dealing with numbers above 9223372036854775807 (N > 92).
 # Because we're using `bc`, IO takes a little longer, so expect large inputs for
 # these cases to be a fair bit slower.

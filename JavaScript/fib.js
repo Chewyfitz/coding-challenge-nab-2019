@@ -1,5 +1,8 @@
 // fib.js by Aidan Fitzpatrick.
 // Written in node-compatible JavaScript.
+// -----------------------------------------
+// Find the number of numbers exactly y-digits long in a fibonacci sequence
+// of length n.
 
 // Node console input module
 const readline = require('readline');

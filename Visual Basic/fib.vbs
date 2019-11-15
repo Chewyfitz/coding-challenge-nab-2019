@@ -1,4 +1,6 @@
 ' Aidan Fitzpatrick - fib.vbs
+' Find the number of numbers exactly y-digits long in a fibonacci sequence
+' of length n.
 
 Function fibs(n, y)
     ' define the variables... I don't know if this is actually necessary,
