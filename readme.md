@@ -32,6 +32,16 @@ The output for this script is printed to the console.
 
 ## fib.c [C]
 
+The C implementation only supports `N` values up to `23601`, above which `long double` rounds to `inf`. This could be mitigated with an external library, but I've opted to apply a constraint so that the program can remain compact and portable.
+Another notable restriction with this implementation is the fact that for a `Y` value above `4933` the result will always be 0, since `long double` cannot handle values that large.
+The C version also has a `Makefile` included, so compiling can be performed with `make`, and then the program can be run in the four expected modes:
+1. `./fib [N,Y]`
+2. `./fib [N, Y]`
+3. `./fib N Y`
+4. `./fib` (interactive)
+
+I've also initialised a debug compilation script with `make debug`, which at the moment only prints the input variables, but could be modified to do whatever is needed.
+
 ## fib.cpp [C++]
 
 ## fib.hs [Haskell]
