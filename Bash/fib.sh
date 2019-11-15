@@ -35,7 +35,7 @@ else
 fi
 
 # Generate enough Fibonacci numbers
-fibs[0]=1
+fibs[0]=0
 fibs[1]=1
 fib_lens[0]=1
 fib_lens[1]=1
